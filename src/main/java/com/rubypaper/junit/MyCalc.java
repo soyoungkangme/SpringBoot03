@@ -12,9 +12,11 @@ public class MyCalc {
 	}
 	
 	public int plus() {
-//		System.out.println("x : " + x);
-//		System.out.println("y : " + y);
-//		System.out.println("sum : " + (x+y));
+		/*
+		System.out.println("x : " + x);
+		System.out.println("y : " + y);
+		System.out.println("sum : " + (x+y));
+		*/
 		return x + y;
 	}
 	
@@ -22,8 +24,16 @@ public class MyCalc {
 		return x - y;
 	}
 	
-	/* 위 두개의 메서드 테스트할때 이 클래스에 main() 만들지 않음 
-	 * 전부 다 출력 코드 => 성능 떨어짐, 재사용 안함 
-	 * 
-	 */
+	
+	/*
+	public static void main(String[] args) {
+		MyCalc calc = new MyCalc(10,3);
+		System.out.println(calc.plus());
+	}
+	*/
 }
+
+
+// 이렇게 테스트하면 
+// 입출력이 많아서 성능이 떨어지고, 테스트 후 삭제하므로 테스트 코드 재사용이 어려움
+// -> 특정 클래스를 테스트 하기 위한 별도의 객체 만들어야함 = test case (MyCalcTest)
